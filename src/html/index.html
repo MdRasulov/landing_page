@@ -3,59 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <title>Document</title>
+    <link href="../css/tailwind-output.css" rel="stylesheet" />
+    <script defer src="../js/script.js"></script>
+    <title>Landing page</title>
   </head>
   <body>
-    <header>
-      <nav></nav>
+    <header
+      class="fixed lg:static w-full bg-secondary lg:bg-white shadow-md lg:shadow-none z-50"
+    >
+      <div class="container flex p-4 items-end">
+        <nav class="grow flex items-end lg:items-center">
+          <a href="#1">
+            <div class="relative flex items-end w-fit">
+              <img
+                class="w-8 h-8 sm:w-12 sm:h-12 mb-[1px]"
+                src="../assets/icons/logo_primary.svg"
+                alt="logo_icon"
+              />
+              <img
+                class="absolute bottom-0 left-0 w-full"
+                src="../assets/icons/line_primary.svg"
+                alt="line"
+              />
+              <p
+                class="font-hooge mb-[2px] ml-1 sm:ml-2 text-2xl/6 sm:text-4xl/10"
+              >
+                LOMBARD
+              </p>
+            </div>
+          </a>
+
+          <div class="hidden lg:flex gap-8 mx-auto">
+            <a href="#2">О программе</a>
+            <a href="#3">Тарифы и цены</a>
+            <a href="#4">Контакты</a>
+          </div>
+        </nav>
+
+        <div class="hidden lg:flex gap-8">
+          <button
+            class="hidden xl:inline px-4 py-3 text-primary font-bold border-2 rounded-lg"
+          >
+            Попробовать бесплатно
+          </button>
+
+          <div class="flex flex-col text-right">
+            <p class="text-primary text-sm">Заказать обратный звонок</p>
+            <p class="mt-auto text-xl/5 font-bold">+7 (495) 677-95-51</p>
+          </div>
+        </div>
+
+        <button id="hamburger-btn" class="inline lg:hidden">
+          <img
+            id="btn-burger-icon"
+            class="w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10"
+            src="../assets/icons/burger-menu.svg"
+            alt=""
+          />
+          <img
+            id="btn-cross-icon"
+            class="hidden w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10"
+            src="../assets/icons/cross.svg"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div id="humburder-nav" class="hidden container p-4 sm:py-8 md:py-10">
+        <nav>
+          <ul class="flex flex-col items-center gap-3 sm:gap-4 md:gap-5">
+            <li class="text-lg sm:text-xl md:text-2xl">
+              <a href="#2">О программе</a>
+            </li>
+            <li class="text-lg sm:text-xl md:text-2xl">
+              <a href="#2">Тарифы и цены</a>
+            </li>
+            <li class="text-lg sm:text-xl md:text-2xl">
+              <a href="#2">Контакты</a>
+            </li>
+            <li>
+              <div class="flex flex-col">
+                <p class="text-primary text-sm">Заказать обратный звонок</p>
+                <p class="mt-auto text-xl/5 font-bold">+7 (495) 677-95-51</p>
+              </div>
+            </li>
+            <li>
+              <button
+                class="mt-2 px-4 py-3 text-primary font-bold border-2 rounded-lg"
+              >
+                Попробовать бесплатно
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div
-          class="container relative flex flex-col min-h-screen sm:min-h-full p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20"
+          class="container grid grid-cols-1 sm:grid-cols-12 gap-4 min-h-screen sm:min-h-0 px-4 pt-20 pb-4 sm:pt-24 sm:pb-8 md:pt-28 md:pb-10 lg:py-14 xl:py-20"
         >
-          <h1 class="mb-6 text-4xl">
-            Лучшая программа для автоматизации
-            <span class="text-primary"> автоломбарда </span>
-          </h1>
+          <div class="relative flex flex-col sm:col-span-8 lg:col-span-6">
+            <h1 class="text-4xl md:text-5xl xl:text-[3.375rem]">
+              Лучшая программа для автоматизации
+              <span class="text-primary"> автоломбарда </span>
+            </h1>
 
-          <p class="mb-4 text-lg lg:text-2xl/6">
-            Начните работать в XLombard бесплатно уже сегодня
-          </p>
-
-          <div
-            class="flex flex-grow flex-col sm:flex-row justify-end sm:justify-normal sm:items-center gap-2"
-          >
-            <p class="sm:order-2 sm:w-60 text-sm text-gray">
-              Подберем пакет документов и сделаем базовые настройки
+            <p class="my-6 sm:mt-14 sm:mb-7 text-xl md:text-2xl lg:text-[2rem]">
+              Начните работать в XLombard бесплатно уже сегодня
             </p>
 
-            <button
-              class="sm:order-1 px-4 lg:px-5 xl:px-7 py-2 md:py-3 xl:py-2 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+            <div
+              class="grow sm:grow-0 flex flex-col md:flex-row justify-end sm:justify-normal sm:items-start md:items-center gap-2 sm:gap-4 lg:gap-6"
             >
-              Хочу попробовать!
-            </button>
-          </div>
+              <p class="md:order-2 text-sm text-gray">
+                Подберем пакет документов <br class="hidden md:inline" />
+                и сделаем базовые настройки
+              </p>
 
-          <div
-            class="sm:hidden absolute top-1/2 right-0 -translate-y-1/2 -z-10 overflow-hidden"
-          >
-            <div class="relative w-56 h-56 translate-x-1/3">
-              <div
-                class="absolute w-40 h-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#E0E1F9] rounded-lg rotate-45"
-              ></div>
-              <div
-                class="absolute w-40 h-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#FAFAFC] rounded-lg rotate-[23.5deg] shadow-lg"
-              ></div>
-              <img
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                src="../assets/group.svg"
-                alt="group"
-              />
+              <button
+                class="md:order-1 px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+              >
+                Хочу попробовать!
+              </button>
+            </div>
+
+            <div
+              class="sm:hidden absolute top-1/2 right-0 -translate-y-1/2 -z-10 overflow-hidden"
+            >
+              <div class="relative w-56 h-56 translate-x-1/3">
+                <div
+                  class="absolute w-40 h-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#E0E1F9] rounded-lg rotate-45"
+                ></div>
+                <div
+                  class="absolute w-40 h-40 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#FAFAFC] rounded-lg rotate-[23.5deg] shadow-lg"
+                ></div>
+                <img
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  src="../assets/icons/group.svg"
+                  alt="group"
+                />
+              </div>
             </div>
           </div>
+
+          <div class="hidden sm:block sm:col-span-4 lg:col-span-6"></div>
         </div>
       </section>
 
@@ -68,7 +161,7 @@
           </h2>
 
           <div
-            class="flex flex-col md:flex-row gap-4 items-center sm:items-end md:items-stretch justify-center my-6"
+            class="flex flex-col md:flex-row gap-4 items-center sm:items-end md:items-stretch justify-end my-6"
           >
             <div
               class="flex flex-col w-full sm:max-w-[17.5rem] bg-white rounded-2xl shadow-[0px_26px_44px_-10px_rgba(57,81,219,0.27)] overflow-hidden"
@@ -82,7 +175,11 @@
               <div
                 class="flex justify-start items-center gap-2 h-16 px-8 bg-secondary"
               >
-                <img src="../assets/file.svg" alt="file" class="w-6 h-6" />
+                <img
+                  src="../assets/icons/file.svg"
+                  alt="file"
+                  class="w-6 h-6"
+                />
                 <p class="text-sm font-bold text-[#788EC7]">ДКП + ДФА</p>
               </div>
             </div>
@@ -99,7 +196,11 @@
               <div
                 class="flex justify-start items-center gap-2 h-16 px-8 bg-secondary"
               >
-                <img src="../assets/file.svg" alt="file" class="w-6 h-6" />
+                <img
+                  src="../assets/icons/file.svg"
+                  alt="file"
+                  class="w-6 h-6"
+                />
                 <p class="text-sm font-bold text-[#788EC7]">ЗАЛОГОВЫЙ БИЛЕТ</p>
               </div>
             </div>
@@ -116,7 +217,11 @@
               <div
                 class="flex justify-start items-center gap-2 h-16 px-8 bg-secondary"
               >
-                <img src="../assets/file.svg" alt="file" class="w-6 h-6" />
+                <img
+                  src="../assets/icons/file.svg"
+                  alt="file"
+                  class="w-6 h-6"
+                />
                 <p class="text-sm font-bold text-[#788EC7]">ЗАЙМ + ДОЛГ</p>
               </div>
             </div>
@@ -246,16 +351,21 @@
             Интеграции с различными системами
           </h2>
 
-          <div class="max-w-sm my-6">
-            <div class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"></div>
-            <p class="text-lg lg:text-2xl mb-1">
-              Интеграционные модули позволяют существенно оптимизировать
-              ежедневную работу сотрудников
-            </p>
-            <p class="text-gray text-sm lg:text-base font-normal">
-              Выберите на схеме направление, в котором вас интересует
-              интеграция, и мы покажем с какими системами она доступна
-            </p>
+          <div class="flex flex-col mt-6 gap-4">
+            <div
+              class="max-w-md xl:max-w-xl h-auto aspect-square bg-secondary rounded-full"
+            ></div>
+            <div class="max-w-sm">
+              <div class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"></div>
+              <p class="text-lg lg:text-2xl mb-1">
+                Интеграционные модули позволяют существенно оптимизировать
+                ежедневную работу сотрудников
+              </p>
+              <p class="text-gray text-sm lg:text-base font-normal">
+                Выберите на схеме направление, в котором вас интересует
+                интеграция, и мы покажем с какими системами она доступна
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -399,13 +509,15 @@
             <div
               class="flex flex-col gap-4 w-full max-w-sm min-h-[10rem] px-6 sm:px-8 lg:px-6 xl:px-8 py-7 sm:py-9 lg:py-7 xl:py-9 bg-secondary rounded-2xl"
             >
-              <p class="grow">
+              <p class="grow text-center sm:text-left">
                 Сделано больших и маленьких доработок уже существующих модулей
               </p>
-              <div class="flex gap-2 lg:gap-3 items-center">
+              <div
+                class="flex gap-2 lg:gap-3 items-center justify-center sm:justify-start"
+              >
                 <img
                   class="w-8 md:w-12 lg:w-8 xl:w-12 h-8 md:h-12 lg:h-8 xl:h-12"
-                  src="../assets/puzzle.svg"
+                  src="../assets/icons/puzzle.svg"
                   alt="puzzle_icon"
                 />
                 <p
@@ -419,11 +531,15 @@
             <div
               class="flex flex-col gap-4 w-full max-w-sm min-h-[10rem] px-6 sm:px-8 lg:px-6 xl:px-8 py-7 sm:py-9 lg:py-7 xl:py-9 bg-secondary rounded-2xl"
             >
-              <p class="grow">Исправлено недочетов в программе</p>
-              <div class="flex gap-2 lg:gap-3 items-center">
+              <p class="grow text-center sm:text-left">
+                Исправлено недочетов в программе
+              </p>
+              <div
+                class="flex gap-2 lg:gap-3 items-center justify-center sm:justify-start"
+              >
                 <img
                   class="w-8 md:w-12 lg:w-8 xl:w-12 h-8 md:h-12 lg:h-8 xl:h-12"
-                  src="../assets/check-circle.svg"
+                  src="../assets/icons/check-circle.svg"
                   alt="puzzle_icon"
                 />
                 <p
@@ -437,13 +553,15 @@
             <div
               class="flex flex-col gap-4 w-full max-w-sm min-h-[10rem] px-6 sm:px-8 lg:px-6 xl:px-8 py-7 sm:py-9 lg:py-7 xl:py-9 bg-secondary rounded-2xl"
             >
-              <p class="grow">
+              <p class="grow text-center sm:text-left">
                 Обработано обращений клиентов в техническую поддержку
               </p>
-              <div class="flex items-center gap-2 lg:gap-3">
+              <div
+                class="flex items-center gap-2 lg:gap-3 justify-center sm:justify-start"
+              >
                 <img
                   class="w-8 md:w-12 lg:w-8 xl:w-12 h-8 md:h-12 lg:h-8 xl:h-12"
-                  src="../assets/mail.svg"
+                  src="../assets/icons/mail.svg"
                   alt="puzzle_icon"
                 />
                 <p
@@ -457,11 +575,15 @@
             <div
               class="flex flex-col gap-4 w-full max-w-sm min-h-[10rem] px-6 sm:px-8 lg:px-6 xl:px-8 py-7 sm:py-9 lg:py-7 xl:py-9 bg-secondary rounded-2xl"
             >
-              <p class="grow">Пришло новых людей в коллектив XLombard</p>
-              <div class="flex gap-2 lg:gap-3 items-center">
+              <p class="grow text-center sm:text-left">
+                Пришло новых людей в коллектив XLombard
+              </p>
+              <div
+                class="flex gap-2 lg:gap-3 items-center justify-center sm:justify-start"
+              >
                 <img
                   class="w-8 md:w-12 lg:w-8 xl:w-12 h-8 md:h-12 lg:h-8 xl:h-12"
-                  src="../assets/profile.svg"
+                  src="../assets/icons/profile.svg"
                   alt="puzzle_icon"
                 />
                 <p
@@ -490,7 +612,7 @@
               <div class="w-full h-20">
                 <img
                   class="w-full h-full object-contain"
-                  src="../assets/capital.png"
+                  src="../assets/images/capital.png"
                   alt="capital.png"
                 />
               </div>
@@ -537,7 +659,7 @@
                   <div class="flex gap-2">
                     <img
                       class="w-6 h-6"
-                      src="../assets/clock.svg"
+                      src="../assets/icons/clock.svg"
                       alt="clock"
                     />
 
@@ -556,7 +678,7 @@
                   <div class="flex gap-2">
                     <img
                       class="w-6 h-6"
-                      src="../assets/profile.svg"
+                      src="../assets/icons/profile.svg"
                       alt="clock"
                     />
 
@@ -585,7 +707,7 @@
                 <div class="hidden sm:flex flex-col items-center gap-2">
                   <img
                     class="w-12 h-12"
-                    src="../assets/mail_2.svg"
+                    src="../assets/icons/mail_2.svg"
                     alt="mail"
                   />
 
@@ -663,7 +785,7 @@
               <div class="p-2 lg:p-3 bg-white/10">
                 <img
                   class="w-5 lg:w-6 h-5 lg:h-6"
-                  src="../assets/phone.svg"
+                  src="../assets/icons/phone.svg"
                   alt="phone"
                 />
               </div>
@@ -671,7 +793,7 @@
               <div class="p-2 lg:p-3 bg-white/10">
                 <img
                   class="w-5 lg:w-6 h-5 lg:h-6"
-                  src="../assets/telegram.svg"
+                  src="../assets/icons/telegram.svg"
                   alt="phone"
                 />
               </div>
@@ -679,7 +801,7 @@
               <div class="p-2 lg:p-3 bg-white/10">
                 <img
                   class="w-5 lg:w-6 h-5 lg:h-6"
-                  src="../assets/whats_up.svg"
+                  src="../assets/icons/whats_up.svg"
                   alt="phone"
                 />
               </div>
@@ -720,7 +842,7 @@
 
       <section class="bg-gradient-primary">
         <div
-          class="container flex flex-col md:flex-row gap-8 md:gap-4 p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20"
+          class="container flex flex-col md:flex-row md:items-center gap-8 md:gap-4 p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20"
         >
           <div class="w-full">
             <h2
@@ -742,14 +864,16 @@
                   ></div>
                   <img
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 lg:w-10 xl:w-12 h-8 lg:h-10 xl:h-12"
-                    src="../assets/message-circle.svg"
+                    src="../assets/icons/message-circle.svg"
                     alt="message-circle"
                   />
                 </div>
 
                 <div>
                   <p class="text-xl/5 xl:text-2xl/6">Пишите нам</p>
-                  <p class="text-gray xl:text-xl font-normal">
+                  <p
+                    class="text-base/5 sm:text-lg/6 xl:text-xl font-normal text-gray"
+                  >
                     в мессенджеры на +7 (968) 096-59-40
                   </p>
                 </div>
@@ -767,14 +891,16 @@
                   ></div>
                   <img
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 lg:w-10 xl:w-12 h-8 lg:h-10 xl:h-12"
-                    src="../assets/phone-call.svg"
+                    src="../assets/icons/phone-call.svg"
                     alt="phone-call"
                   />
                 </div>
 
                 <div>
                   <p class="text-xl/5 xl:text-2xl/6">Звоните</p>
-                  <p class="text-gray xl:text-xl font-normal">
+                  <p
+                    class="text-base/5 sm:text-lg/6 xl:text-xl font-normal text-gray"
+                  >
                     с 10-00 до 18-00 по Мск
                   </p>
                 </div>
@@ -792,14 +918,16 @@
                   ></div>
                   <img
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 lg:w-10 xl:w-12 h-8 lg:h-10 xl:h-12"
-                    src="../assets/map-pin.svg"
+                    src="../assets/icons/map-pin.svg"
                     alt="map-pin"
                   />
                 </div>
 
                 <div>
                   <p class="text-xl/5 xl:text-2xl/6">Приезжайте</p>
-                  <p class="text-gray xl:text-xl font-normal">
+                  <p
+                    class="text-base/5 sm:text-lg/6 xl:text-xl font-normal text-gray"
+                  >
                     Москва, ул. 3-я Северная линия, д. 14, оф. 2
                   </p>
                 </div>
@@ -807,7 +935,9 @@
             </div>
           </div>
 
-          <div class="w-full px-4 py-4 bg-white rounded-lg">
+          <div
+            class="w-full p-4 sm:p-8 md:p-6 lg:p-10 xl:p-12 bg-white rounded-lg"
+          >
             <p
               class="text-xl/6 sm:text-2xl/7 md:text-xl/6 lg:text-2xl/7 xl:text-3xl/8"
             >
@@ -817,50 +947,55 @@
               >
             </p>
             <p
-              class="mt-2 mb-6 leading-5 sm:text-lg md:text-base lg:text-lg xl:text-xl font-normal"
+              class="mt-2 sm:mt-3 mb-6 sm:mb-8 md:mb-7 lg:mb-10 leading-5 sm:text-lg md:text-base lg:text-lg xl:text-xl font-normal"
             >
               Проведём онлайн демонстрацию по Zoom!
             </p>
 
-            <form class="flex flex-col gap-2 font-normal text-sm">
+            <form
+              class="flex flex-col gap-2 lg:gap-3 font-normal text-sm lg:text-base xl:text-xl"
+            >
               <div class="">
                 <input
-                  class="w-full px-4 py-2 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0"
+                  class="w-full px-4 lg:px-7 py-2 lg:py-4 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0"
                   type="text"
-                  placeholder="Как к вам обращаться (ваше имя)"
-                  id="form_name"
+                  name="form_name"
+                  placeholder="Ваше имя"
+                  required
                 />
               </div>
 
               <div class="">
                 <input
-                  class="w-full px-4 py-2 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0"
+                  class="w-full px-4 lg:px-7 py-2 lg:py-4 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0"
                   type="number"
-                  placeholder="Телефон, чтобы мы могли перезвонить"
-                  id="form_number"
+                  placeholder="Ваш телефон"
+                  name="form_number"
+                  required
                 />
               </div>
 
               <div class="">
                 <input
-                  class="w-full px-4 py-2 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0"
+                  class="w-full px-4 lg:px-7 py-2 lg:py-4 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0"
                   type="email"
-                  placeholder="Электронная почта для отправки ответа"
-                  id="form_email"
+                  placeholder="Электронная почта"
+                  name="form_email"
+                  required
                 />
               </div>
 
               <div class="">
                 <textarea
-                  class="w-full px-4 py-2 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0 resize-none"
+                  class="w-full px-4 lg:px-7 py-2 lg:py-4 border border-[#8B94C7] focus:border-primary rounded-lg focus:outline-0 resize-none"
                   placeholder="Ваш вопрос"
-                  id="form_question"
+                  name="form_question"
                   rows="3"
                 ></textarea>
               </div>
 
               <button
-                class="w-full mt-2 px-4 md:px-5 xl:px7 py-2 md:py-3 xl:py-4 bg-primary text-white font-medium lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+                class="w-full mt-2 xl:mt-4 px-4 md:px-5 xl:px7 py-2 md:py-3 xl:py-4 bg-primary text-white font-medium lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
               >
                 Отправить сообщение
               </button>
@@ -877,22 +1012,18 @@
         <div
           class="flex flex-col sm:order-3 lg:order-1 lg:col-span-4 xl:col-span-3"
         >
-          <div class="logo">
-            <div class="relative flex items-end w-fit">
-              <img
-                class="w-8 h-8 mb-[1px]"
-                src="../assets/logo.svg"
-                alt="logo_icon"
-              />
-              <img
-                class="absolute bottom-0 left-0 w-full"
-                src="../assets/line.svg"
-                alt="line"
-              />
-              <p class="mb-1 ml-2 text-[1.75rem] leading-7 font-bold">
-                LOMBARD
-              </p>
-            </div>
+          <div class="relative flex items-end w-fit">
+            <img
+              class="w-9 h-9 mb-[1px]"
+              src="../assets/icons/logo.svg"
+              alt="logo_icon"
+            />
+            <img
+              class="absolute bottom-0 left-0 w-full"
+              src="../assets/icons/line.svg"
+              alt="line"
+            />
+            <p class="font-hooge mb-1 ml-2 text-[1.75rem] leading-7">LOMBARD</p>
           </div>
 
           <p class="mt-2 mb-auto font-normal">
@@ -924,7 +1055,7 @@
         </div>
 
         <div
-          class="sm:order-2 lg:order-3 lg:col-span-2 xl:col-span-3 lg:justify-self-center"
+          class="sm:order-2 lg:order-3 lg:col-span-2 xl:col-span-2 lg:justify-self-center"
         >
           <p class="text-xl font-bold">О нас</p>
 
@@ -934,9 +1065,7 @@
           </ul>
         </div>
 
-        <div
-          class="flex flex-col sm:order-4 lg:order-4 lg:col-span-4 xl:col-span-3"
-        >
+        <div class="flex flex-col sm:order-4 lg:order-4 lg:col-span-4">
           <button
             class="hidden sm:block mb-auto ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 lg:font-bold text-lg md:text-xl border-2 border-white rounded-lg"
           >
@@ -952,7 +1081,7 @@
             <div class="p-2 lg:p-3 bg-white/10">
               <img
                 class="w-5 lg:w-6 h-5 lg:h-6"
-                src="../assets/telegram.svg"
+                src="../assets/icons/telegram.svg"
                 alt="phone"
               />
             </div>
@@ -960,7 +1089,7 @@
             <div class="p-2 lg:p-3 bg-white/10">
               <img
                 class="w-5 lg:w-6 h-5 lg:h-6"
-                src="../assets/whats_up.svg"
+                src="../assets/icons/whats_up.svg"
                 alt="phone"
               />
             </div>

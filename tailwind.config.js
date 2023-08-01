@@ -6,6 +6,10 @@ module.exports = {
       backgroundImage: {
         'gradient-primary': `linear-gradient(180deg, #EFF1FD, #FAFAFC)`,
       },
+      fontFamily: {
+        onest: ['onest', 'sans-serif'],
+        hooge: ['hooge', 'sans-serif'],
+      },
     },
     container: {
       center: true,

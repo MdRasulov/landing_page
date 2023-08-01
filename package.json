@@ -3,6 +3,6 @@
     "tailwindcss": "^3.3.3"
   },
   "scripts": {
-    "dev": "tailwindcss -i ./src/css/input.css -o ./dist/output.css --watch"
+    "dev": "tailwindcss -i ./src/css/tailwind-input.css -o ./src/css/tailwind-output.css --watch"
   }
 }
