@@ -14,11 +14,12 @@
   <body>
     <!-- Heading -->
     <header
-      class="fixed lg:static w-full bg-secondary lg:bg-white shadow-md lg:shadow-none z-50"
+      class="fixed lg:static z-50 w-full bg-secondary lg:bg-white shadow-md lg:shadow-none"
     >
       <!-- Desktop Heading Content -->
-      <div class="container flex p-4 items-end">
+      <div class="container flex p-4 items-center">
         <nav class="grow flex items-end lg:items-center">
+          <!-- Logo -->
           <a href="#1">
             <div class="relative flex items-end w-fit">
               <img
@@ -59,24 +60,19 @@
           </div>
         </div>
 
-        <button id="hamburger-btn" class="inline lg:hidden">
-          <img
-            id="btn-burger-icon"
-            class="w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10"
-            src="../assets/icons/burger-menu.svg"
-            alt=""
-          />
-          <img
-            id="btn-cross-icon"
-            class="hidden w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10"
-            src="../assets/icons/cross.svg"
-            alt=""
-          />
-        </button>
+        <div class="inline lg:hidden">
+          <div
+            id="hamburger-btn"
+            class="w-7 sm:w-8 h-[0.2rem] sm:h-1 bg-black rounded-full before:absolute before:w-7 before:h-[0.2rem] sm:before:w-8 sm:before:h-1 before:bg-black before:rounded-full before:-translate-y-[0.40rem] sm:before:-translate-y-2 after:absolute after:w-7 after:h-[0.2rem] sm:after:w-8 sm:after:h-1 after:bg-black after:rounded-full after:translate-y-[0.40rem] sm:after:translate-y-2 transition-all duration-200 before:transition-all before:duration-200 after:transition-all after:duration-200"
+          ></div>
+        </div>
       </div>
 
       <!-- Mobile Hading Content -->
-      <div id="mobile-nav-menu" class="hidden container p-4 sm:py-8 md:py-10">
+      <div
+        id="mobile-nav-menu"
+        class="hidden lg:hidden container p-4 sm:py-8 md:py-10"
+      >
         <nav>
           <ul class="flex flex-col items-center gap-3 sm:gap-4 md:gap-5">
             <li class="text-lg sm:text-xl md:text-2xl">
@@ -209,11 +205,13 @@
       <!-- Hero Section -->
       <section class="hero">
         <div
-          class="container grid grid-cols-1 sm:grid-cols-12 gap-4 min-h-screen sm:min-h-0 px-4 pt-20 pb-4 sm:pt-24 sm:pb-8 md:pt-28 md:pb-10 lg:py-14 xl:py-20"
+          class="container grid grid-cols-1 sm:grid-cols-12 gap-4 min-h-screen sm:min-h-0 px-4 pt-20 pb-4 sm:pt-24 sm:pb-8 md:pt-28 md:pb-10 lg:py-12 xl:py-20"
         >
           <div class="relative flex flex-col sm:col-span-8 lg:col-span-6">
             <!-- Main Heading -->
-            <h1 class="relative text-4xl md:text-5xl xl:text-[3.375rem]">
+            <h1
+              class="relative text-4xl md:text-5xl xl:text-[3.375rem] md:leading-[115%]"
+            >
               <span
                 class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-10 md:before:w-14 xl:before:w-[3.875rem] before:h-10 md:before:h-14 xl:before:h-[3.875rem] before:bg-lightBlue before:-translate-x-[20%] md:before:-translate-x-[25%]"
                 >Лучшая
@@ -222,7 +220,9 @@
               <span class="text-primary"> автоломбарда </span>
             </h1>
 
-            <p class="my-6 sm:mt-14 sm:mb-7 text-xl md:text-2xl lg:text-[2rem]">
+            <p
+              class="my-6 sm:mt-14 sm:mb-7 text-xl md:text-2xl lg:text-[2rem] lg:leading-[120%]"
+            >
               Начните работать в XLombard бесплатно уже сегодня
             </p>
 
@@ -241,6 +241,7 @@
               </button>
             </div>
 
+            <!-- Illustration for mobile screens -->
             <div
               class="sm:hidden absolute top-1/2 right-0 -translate-y-1/2 -z-10 overflow-hidden"
             >
@@ -260,13 +261,32 @@
             </div>
           </div>
 
-          <div class="hidden sm:block sm:col-span-4 lg:col-span-6"></div>
+          <div class="hidden sm:block sm:col-span-4 lg:col-span-6 self-center">
+            <div
+              class="hidden lg:block max-w-xs ml-auto py-10 xl:py-14 px-10 bg-secondary rounded-2xl"
+            >
+              <div
+                class="relative z-10 w-fit mx-auto text-3xl before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-10 before:h-10 before:bg-lilac before:-translate-x-[30%] before:-translate-y-[10%]"
+              >
+                Функционал
+              </div>
+
+              <ul
+                class="flex flex-col gap-3 w-36 mt-6 mx-auto xl:ml-auto xl:mr-0 text-lg/6 font-normal list-disc marker:text-primary"
+              >
+                <li>18 модулей</li>
+                <li>Полный цикл управления портфелем</li>
+                <li>Безопастность</li>
+                <li>CRM</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Advantages Section -->
       <section class="bg-gradient-primary">
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
           <h2
             class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
@@ -279,7 +299,7 @@
 
           <!-- Advantage Cards -->
           <div
-            class="flex flex-col md:flex-row gap-4 items-center sm:items-end md:items-stretch justify-end my-6"
+            class="flex flex-col md:flex-row gap-4 items-center sm:items-end md:items-stretch mb-6"
           >
             <div
               class="flex flex-col w-full sm:max-w-[17.5rem] bg-white rounded-2xl shadow-[0px_26px_44px_-10px_rgba(57,81,219,0.27)] overflow-hidden"
@@ -346,16 +366,22 @@
           </div>
 
           <div>
-            <p class="text-base">
-              Создали специальную конфигурацию для обратного лизинга
+            <p class="text-base/5 sm:text-lg/6 md:text-2xl/7">
+              <span
+                class="relative z-10 before:hidden sm:before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 before:bg-lilac before:-translate-x-[30%] before:-translate-y-[30%] md:before:-translate-y-[20%]"
+                >Создали
+              </span>
+              специальную конфигурацию для обратного лизинга
             </p>
 
-            <p class="mt-1 mb-4 text-sm text-gray">
+            <p
+              class="mt-1 mb-4 text-sm/4 sm:text-base/5 md:text-xl/6 font-normal"
+            >
               Учли все тонкости бизнеса и подключили необходимые сервисы
             </p>
 
             <button
-              class="block ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+              class="block ml-auto sm:ml-0 px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
             >
               Сел и поехал!
             </button>
@@ -365,10 +391,10 @@
 
       <!-- Functionality Section -->
       <section>
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
           <h2
-            class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
+            class="sm:mb-8 md:mb-10 lg:mb-14 xl:mb-20 text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
           >
             <span
               class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 sm:before:w-10 sm:before:h-10 md:before:w-12 md:before:h-12 before:bg-lightBlue before:-translate-x-[30%] before:-translate-y-[10%]"
@@ -378,40 +404,108 @@
           </h2>
 
           <!-- Functionality Container -->
-          <div class="flex flex-col md:flex-row gap-6 xl:gap-6 my-6">
+          <div
+            class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center my-6 sm:my-0"
+          >
             <!-- Main Functionalities -->
             <div
-              class="flex flex-col md:order-2 gap-8 px-4 py-8 bg-secondary rounded-2xl"
+              class="flex flex-col md:order-2 gap-8 lg:gap-12 xl:gap-14 px-8 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-16 bg-secondary rounded-2xl"
             >
-              <div>
-                <div class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"></div>
-                <p class="text-lg lg:text-2xl mb-1">Агрегатор заявок</p>
-                <p class="text-sm lg:text-base font-normal">
-                  Агрегатор заявок на займ из различных источников (веб-сайтов,
-                  партнеров компании и т.д.), позволяет более качественно
-                  управлять входящими обращениями клиентов
-                </p>
+              <div class="flex gap-6 xl:gap-7">
+                <div
+                  class="hidden sm:block relative shrink-0 w-20 xl:w-[6rem] h-20 xl:h-[6rem]"
+                >
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 xl:w-[4.75rem] h-16 xl:h-[4.75rem] bg-[#E3E4F8] rounded-lg rotate-45"
+                  ></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 xl:w-[4.75rem] h-16 xl:h-[4.75rem] bg-white rounded-lg rotate-[24deg] shadow-lg"
+                  ></div>
+                  <img
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 xl:w-12 h-10 xl:h-12"
+                    src="../assets/icons/file-input.svg"
+                    alt="file-input.svg"
+                  />
+                </div>
+
+                <div>
+                  <div
+                    class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"
+                  ></div>
+                  <p class="text-lg lg:text-2xl mb-1 lg:mb-3 xl:mb-4">
+                    Агрегатор заявок
+                  </p>
+                  <p class="text-sm lg:text-base font-normal">
+                    Агрегатор заявок на займ из различных источников
+                    (веб-сайтов, партнеров компании и т.д.), позволяет более
+                    качественно управлять входящими обращениями клиентов
+                  </p>
+                </div>
               </div>
-              <div>
-                <div class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"></div>
-                <p class="text-lg lg:text-2xl mb-1">Уведомления</p>
-                <p class="text-sm lg:text-base font-normal">
-                  Sms и Email-уведомления обо всех операциях в компании. Также
-                  используется для уведомлений клиентам компании о текущем
-                  состоянии договора, акциях и скидках
-                </p>
+
+              <div class="flex gap-6 xl:gap-7">
+                <div
+                  class="hidden sm:block relative shrink-0 w-20 xl:w-[6rem] h-20 xl:h-[6rem]"
+                >
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 xl:w-[4.75rem] h-16 xl:h-[4.75rem] bg-[#E3E4F8] rounded-lg rotate-45"
+                  ></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 xl:w-[4.75rem] h-16 xl:h-[4.75rem] bg-white rounded-lg rotate-[24deg] shadow-lg"
+                  ></div>
+                  <img
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 xl:w-12 h-10 xl:h-12"
+                    src="../assets/icons/bell-ring.svg"
+                    alt="bell-ring.svg"
+                  />
+                </div>
+
+                <div>
+                  <div
+                    class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"
+                  ></div>
+                  <p class="text-lg lg:text-2xl mb-1 lg:mb-3 xl:mb-4">
+                    Уведомления
+                  </p>
+                  <p class="text-sm lg:text-base font-normal">
+                    Sms и Email-уведомления обо всех операциях в компании. Также
+                    используется для уведомлений клиентам компании о текущем
+                    состоянии договора, акциях и скидках
+                  </p>
+                </div>
               </div>
-              <div>
-                <div class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"></div>
-                <p class="text-lg lg:text-2xl mb-1">
-                  Исключаем человеческий фактор
-                </p>
-                <p class="text-sm lg:text-base font-normal">
-                  XLombard MOD - дополнительные модули позволяют существенно
-                  оптимизировать ежедневную работу сотрудников. XLombard делает
-                  невозможными ошибки, связанные с человеческим фактором при
-                  оформлении договоров.
-                </p>
+
+              <div class="flex gap-6 xl:gap-7">
+                <div
+                  class="hidden sm:block relative shrink-0 w-20 xl:w-[6rem] h-20 xl:h-[6rem]"
+                >
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 xl:w-[4.75rem] h-16 xl:h-[4.75rem] bg-[#E3E4F8] rounded-lg rotate-45"
+                  ></div>
+                  <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 xl:w-[4.75rem] h-16 xl:h-[4.75rem] bg-white rounded-lg rotate-[24deg] shadow-lg"
+                  ></div>
+                  <img
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 xl:w-12 h-10 xl:h-12"
+                    src="../assets/icons/slash.svg"
+                    alt="slash.svg"
+                  />
+                </div>
+
+                <div>
+                  <div
+                    class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"
+                  ></div>
+                  <p class="text-lg lg:text-2xl mb-1 lg:mb-3 xl:mb-4">
+                    Исключаем человеческий фактор
+                  </p>
+                  <p class="text-sm lg:text-base font-normal">
+                    XLombard MOD - дополнительные модули позволяют существенно
+                    оптимизировать ежедневную работу сотрудников. XLombard
+                    делает невозможными ошибки, связанные с человеческим
+                    фактором при оформлении договоров.
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -472,7 +566,7 @@
 
       <!-- System Integrations Section -->
       <section>
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
           <h2
             class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
@@ -505,7 +599,7 @@
 
       <!-- Features Section -->
       <section class="bg-gradient-primary">
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
           <h2
             class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
@@ -641,7 +735,7 @@
 
       <!-- Accomplishments Section -->
       <section>
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
           <h2
             class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
@@ -780,7 +874,7 @@
 
       <!-- Testimonials Section -->
       <section class="bg-gradient-primary">
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
           <h2
             class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
@@ -946,7 +1040,7 @@
 
       <!-- Technical Support Section -->
       <section class="bg-primary">
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
           <h2
             class="text-white text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
@@ -1120,7 +1214,7 @@
 
       <!-- Updates Section -->
       <section>
-        <div class="container p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20">
+        <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <div class="flex flex-col lg:flex-row justify-between gap-4">
             <!-- Heading -->
             <h2
@@ -1310,7 +1404,7 @@
       <!-- Message Section -->
       <section class="bg-gradient-primary">
         <div
-          class="container flex flex-col md:flex-row md:items-center gap-8 md:gap-4 p-4 sm:py-8 md:py-10 lg:py-14 xl:py-20"
+          class="container flex flex-col md:flex-row md:items-center gap-8 md:gap-4 p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16"
         >
           <!-- Contact Info -->
           <div class="w-full">

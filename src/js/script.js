@@ -1,8 +1,6 @@
 const burgerBtn = document.querySelector('#hamburger-btn')
 // const mobileNavModal = document.querySelector('#mobile-nav-modal')
 const mobileNavMenu = document.querySelector('#mobile-nav-menu')
-const burgerIcon = document.querySelector('#btn-burger-icon')
-const crossIcon = document.querySelector('#btn-cross-icon')
 
 let swiperIsActive = false
 let swiperServices = null
@@ -122,8 +120,7 @@ swiperServiseToggle()
 
 burgerBtn.addEventListener('click', () => {
   mobileNavMenu.classList.toggle('hidden')
-  burgerIcon.classList.toggle('hidden')
-  crossIcon.classList.toggle('hidden')
+  burgerBtn.classList.toggle('hamburger-toggle')
 })
 
 window.addEventListener('resize', swiperServiseToggle)

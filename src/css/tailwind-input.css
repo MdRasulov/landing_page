@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
 @font-face {
   font-family: 'onest';
   src: url('../assets/fonts/onest/OnestRegular.ttf') format('truetype');
@@ -26,6 +27,21 @@
   font-weight: 400;
 }
 
+/* Default styles */
+@layer components {
+  body {
+    @apply font-onest font-medium text-black;
+  }
+}
+
+/* Hamburger menu toggle */
+@layer utilities {
+  .hamburger-toggle {
+    @apply h-0 bg-white before:!translate-y-0 before:rotate-45 after:!translate-y-0 after:-rotate-45;
+  }
+}
+
+/* Hide arrows in number input */
 @layer base {
   input[type='number']::-webkit-outer-spin-button,
   input[type='number']::-webkit-inner-spin-button,
@@ -35,14 +51,3 @@
     -moz-appearance: textfield !important;
   }
 }
-
-@layer components {
-  body {
-    @apply font-onest font-medium text-black;
-  }
-}
-
-/* swiper pagination styles */
-/* .swiper-pagination .swiper-pagination-bullet {
-  background-color: #0862ee;
-} */
