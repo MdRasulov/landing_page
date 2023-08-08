@@ -393,20 +393,28 @@
       <section>
         <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
-          <h2
-            class="sm:mb-8 md:mb-10 lg:mb-14 xl:mb-20 text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
+          <div
+            class="lg:flex gap-4 items-center mb-6 sm:mb-8 md:mb-10 lg:mb-14 xl:mb-20"
           >
-            <span
-              class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 sm:before:w-10 sm:before:h-10 md:before:w-12 md:before:h-12 before:bg-lightBlue before:-translate-x-[30%] before:-translate-y-[10%]"
-              >Возможности
-            </span>
-            <span class="text-primary">XLombard BPM System </span>
-          </h2>
+            <h2
+              class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
+            >
+              <span
+                class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 sm:before:w-10 sm:before:h-10 md:before:w-12 md:before:h-12 before:bg-lightBlue before:-translate-x-[30%] before:-translate-y-[10%]"
+                >Возможности
+              </span>
+              <span class="text-primary">XLombard BPM System </span>
+            </h2>
+
+            <button
+              class="hidden lg:block ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+            >
+              Попробовать бесплатно!
+            </button>
+          </div>
 
           <!-- Functionality Container -->
-          <div
-            class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center my-6 sm:my-0"
-          >
+          <div class="flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
             <!-- Main Functionalities -->
             <div
               class="flex flex-col md:order-2 gap-8 lg:gap-12 xl:gap-14 px-8 lg:px-16 xl:px-20 py-8 sm:py-12 lg:py-16 bg-secondary rounded-2xl"
@@ -557,7 +565,7 @@
           </div>
 
           <button
-            class="block ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+            class="block lg:hidden mt-6 ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
           >
             Попробовать бесплатно!
           </button>
@@ -578,9 +586,9 @@
             с различными системами
           </h2>
 
-          <div class="flex flex-col mt-6 gap-4">
+          <div class="flex flex-col lg:flex-row gap-4 items-center mt-6">
             <div
-              class="max-w-md xl:max-w-xl aspect-square bg-secondary rounded-full"
+              class="w-full max-w-lg xl:max-w-xl aspect-square bg-secondary rounded-full"
             ></div>
             <div class="max-w-sm">
               <div class="w-7 h-1 rounded-full mb-2 lg:mb-3 bg-primary"></div>
@@ -601,21 +609,29 @@
       <section class="bg-gradient-primary">
         <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
-          <h2
-            class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
+          <div
+            class="lg:flex gap-4 items-center mb-6 sm:mb-8 md:mb-10 lg:mb-14 xl:mb-20"
           >
-            <span
-              class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 sm:before:w-10 sm:before:h-10 md:before:w-12 md:before:h-12 before:bg-lightGreen before:-translate-x-[30%] before:-translate-y-[10%]"
-              >Ни</span
+            <h2
+              class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
             >
-            у кого нет —
-            <span class="text-primary"> а у нас есть! </span>
-          </h2>
+              <span
+                class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 sm:before:w-10 sm:before:h-10 md:before:w-12 md:before:h-12 before:bg-lightGreen before:-translate-x-[30%] before:-translate-y-[10%]"
+                >Ни</span
+              >
+              у кого нет —
+              <span class="text-primary"> а у нас есть! </span>
+            </h2>
+
+            <button
+              class="hidden lg:block ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+            >
+              Заказать презентацию системы
+            </button>
+          </div>
 
           <!-- Features Carousel/List -->
-          <div
-            class="swiper swiper-services mt-6 sm:mt-10 lg:mt-14 pb-6 md:pb-10"
-          >
+          <div class="swiper swiper-services pb-6 md:pb-8">
             <div
               class="swiper-wrapper sm:grid sm:grid-cols-2 xl:grid-cols-3 sm:justify-items-center sm:gap-4 lg:gap-5"
             >
@@ -726,7 +742,7 @@
           </div>
 
           <button
-            class="block ml-auto mt-4 sm:mt-0 px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+            class="block lg:hidden mt-2 sm:mt-0 ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
           >
             Заказать презентацию системы
           </button>
@@ -748,30 +764,48 @@
           </h2>
 
           <div
-            class="flex flex-col md:flex-row justify-center md:justify-between my-6"
+            class="flex flex-col md:flex-row justify-center md:justify-between gap-6 my-6 sm:my-8 md:my-10 lg:my-14 xl:my-20"
           >
-            <div class="flex flex-col md:flex-row items-center gap-4">
-              <p class="text-5xl lg:text-6xl xl:text-7xl font-bold">+28</p>
+            <div
+              class="flex flex-col md:flex-row items-center md:gap-2 lg:gap-3 xl:gap-6"
+            >
               <p
-                class="text-lg lg:text-xl xl:text-2xl text-center md:text-left"
+                class="text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-bold"
+              >
+                +28
+              </p>
+              <p
+                class="text-lg/6 lg:text-xl/6 xl:text-2xl/7 text-center md:text-left"
               >
                 городов присутствия нашей программы
               </p>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center gap-4">
-              <p class="text-5xl lg:text-6xl xl:text-7xl font-bold">+6</p>
+            <div
+              class="flex flex-col md:flex-row items-center md:gap-2 lg:gap-3 xl:gap-6"
+            >
               <p
-                class="text-lg lg:text-xl xl:text-2xl text-center md:text-left"
+                class="text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-bold"
+              >
+                +6
+              </p>
+              <p
+                class="text-lg/6 lg:text-xl/6 xl:text-2xl/7 text-center md:text-left"
               >
                 новых модулей разработано
               </p>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center gap-4">
-              <p class="text-5xl lg:text-6xl xl:text-7xl font-bold">+9</p>
+            <div
+              class="flex flex-col md:flex-row items-center md:gap-2 lg:gap-3 xl:gap-6"
+            >
               <p
-                class="text-lg lg:text-xl xl:text-2xl text-center md:text-left"
+                class="text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-bold"
+              >
+                +9
+              </p>
+              <p
+                class="text-lg/6 lg:text-xl/6 xl:text-2xl/7 text-center md:text-left"
               >
                 новых интеграций добавлено
               </p>
@@ -779,7 +813,7 @@
           </div>
 
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 justify-items-center sm:gap-4"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 justify-items-center"
           >
             <div
               class="flex flex-col gap-4 w-full max-w-sm min-h-[10rem] px-6 sm:px-8 lg:px-6 xl:px-8 py-7 sm:py-9 lg:py-7 xl:py-9 bg-secondary rounded-2xl"
@@ -876,21 +910,30 @@
       <section class="bg-gradient-primary">
         <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
           <!-- Heading -->
-          <h2
-            class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
+          <div
+            class="lg:flex gap-4 items-center mb-6 sm:mb-8 md:mb-10 lg:mb-14 xl:mb-20"
           >
-            <span
-              class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 sm:before:w-10 sm:before:h-10 md:before:w-12 md:before:h-12 before:bg-lilac before:-translate-x-[30%] before:-translate-y-[10%]"
-              >Кто
-            </span>
-            может нас порекомендовать
-          </h2>
+            <h2
+              class="text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
+            >
+              <span
+                class="relative z-10 before:inline-block before:absolute before:top-0 before:left-0 before:-z-[5] before:w-9 before:h-9 sm:before:w-10 sm:before:h-10 md:before:w-12 md:before:h-12 before:bg-lilac before:-translate-x-[30%] before:-translate-y-[10%]"
+                >Кто
+              </span>
+              может нас порекомендовать
+            </h2>
+
+            <button
+              class="hidden lg:block ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+            >
+              Хочу попробовать
+            </button>
+          </div>
 
           <!-- Testimonials Carousel -->
-          <div
-            class="swiper swiper-recommendations relative mt-6 sm:mt-10 lg:mt-14"
-          >
-            <div class="swiper-wrapper pb-8">
+          <div class="swiper swiper-recommendations relative">
+            <!-- Swiper Slides -->
+            <div class="swiper-wrapper pb-6 sm:pb-8">
               <div class="swiper-slide">
                 <div
                   class="max-w-sm mx-auto px-8 sm:px-10 py-10 sm:py-12 bg-white rounded-2xl shadow-[0px_13px_22px_-5px_rgba(57,81,219,0.27)] overflow-hidden"
@@ -1010,6 +1053,7 @@
 
             <div class="swiper-pagination"></div>
 
+            <!-- Swiper Navigation Buttons -->
             <div
               class="swiper-recommendations-button-prev hidden lg:block w-9 h-9 bg-primary rounded-full absolute top-1/2 -translate-y-1/2 z-50 outline-none overflow-hidden"
             >
@@ -1031,7 +1075,7 @@
           </div>
 
           <button
-            class="block ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
+            class="block lg:hidden mt-2 sm:mt-0 ml-auto px-4 md:px-5 xl:px-7 py-2 md:py-3 xl:py-4 bg-primary text-white lg:font-bold text-lg md:text-xl xl:text-2xl rounded-lg"
           >
             Хочу попробовать
           </button>
@@ -1215,8 +1259,10 @@
       <!-- Updates Section -->
       <section>
         <div class="container p-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
-          <div class="flex flex-col lg:flex-row justify-between gap-4">
-            <!-- Heading -->
+          <!-- Heading -->
+          <div
+            class="flex flex-col lg:flex-row justify-between gap-6 mb-6 sm:mb-8 md:mb-10 lg:mb-14 xl:mb-20"
+          >
             <h2
               class="shrink-0 text-[1.75rem] leading-9 sm:text-3xl md:text-4xl text-center lg:text-left"
             >
@@ -1227,13 +1273,16 @@
               программы
             </h2>
 
-            <p class="max-w-sm lg:max-w-md lg:text-xl lg:text-end">
+            <p
+              class="lg:max-w-md text-base/5 lg:text-xl/6 text-center lg:text-end"
+            >
               Мы постоянно работаем над улучшением системы XLombard
             </p>
           </div>
 
           <!-- Updates Carousel -->
-          <div class="swiper swiper-updates relative mt-6 sm:mt-10 lg:mt-14">
+          <div class="swiper swiper-updates relative">
+            <!-- Swiper Slides -->
             <div class="swiper-wrapper">
               <div class="swiper-slide h-auto">
                 <div
@@ -1379,6 +1428,7 @@
 
             <div class="swiper-pagination"></div>
 
+            <!-- Swiper Navigation Buttons -->
             <div
               class="swiper-updates-button-prev hidden md:block w-9 h-9 bg-primary rounded-full absolute top-1/2 -translate-y-1/2 z-50 outline-none overflow-hidden"
             >
